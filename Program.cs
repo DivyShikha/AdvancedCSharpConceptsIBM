@@ -4,9 +4,11 @@ using FileInputOutputOperations;
 Console.WriteLine("Hello, World!");
 string filepath1 = "furnitures.txt";
 string filepath2 = "employee.txt";
+string filepath3 = "product.cs";
 
 //FileClassDemo(filepath1);
-EmployeeStreamClass(filepath2);
+//EmployeeStreamClass(filepath2);
+ProductStreamClass(filepath3);
 static void FileClassDemo(string filePath1)
 {
     while (true)
@@ -47,7 +49,16 @@ static void EmployeeStreamClass(string filepath2)
     obj1.AddEmployee(new Employee("Divy", 102, "Consulting"), filepath2);
     obj1.AddEmployee(new Employee("Shivanshi", 102, "Consulting"), filepath2);
     obj1.ReadEmployees(filepath2);
+}
 
-
+static void ProductStreamClass(string filepath3)
+{
+    Product product = new Product();
+    product.WriteProductEntry(new Product(12, "Corn Flakes", 34.90), filepath3);
+    product.WriteProductEntry(new Product(13, "Cerelac", 100.90), filepath3);
+    product.WriteProductEntry(new Product(14, "Chocos", 10000.90), filepath3);
+    product.WriteProductEntry(new Product(15, "Cup", 2300.90), filepath3);
+    product.DisplayProductDetails();
+    product.ReadProductEntry(filepath3);
 
 }

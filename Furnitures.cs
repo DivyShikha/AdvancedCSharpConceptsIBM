@@ -43,7 +43,7 @@ namespace FileInputOutputOperations
             {
                 if (!File.Exists(filepath))
                 {
-                    Console.WriteLine("No Firniture exist!");
+                    Console.WriteLine("No Furniture exist!");
                 }
                 string[] furnitures = File.ReadAllLines(filepath);
 
