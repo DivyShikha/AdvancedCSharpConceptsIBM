@@ -2,10 +2,12 @@
 using FileInputOutputOperations;
 
 Console.WriteLine("Hello, World!");
-string filepath = "furnitures.txt";
+string filepath1 = "furnitures.txt";
+string filepath2 = "employee.txt";
 
-FileClassDemo(filepath);
-static object FileClassDemo(string filePath)
+//FileClassDemo(filepath1);
+EmployeeStreamClass(filepath2);
+static void FileClassDemo(string filePath1)
 {
     while (true)
     {
@@ -19,16 +21,33 @@ static object FileClassDemo(string filePath)
         switch (choice)
         {
             case "1":
-                Furnitures.AddFurniture(filePath);
+                Furnitures.AddFurniture(filePath1);
                 break;
             case "2":
-                Furnitures.ViewFurniture(filePath);
+                Furnitures.ViewFurniture(filePath1);
                 break;
             case "3":
-                return Environment.Exit;
+                 Environment.Exit(0);
+                break;
             default:
                 Console.WriteLine("Invalid option. Please try again.");
                 break;
         }
     }
+}
+
+static void EmployeeStreamClass(string filepath2)
+{
+
+    Employee obj1 = new Employee();
+    
+
+
+    obj1.AddEmployee(new Employee("Akash", 101, "Sales"), filepath2);
+    obj1.AddEmployee(new Employee("Divy", 102, "Consulting"), filepath2);
+    obj1.AddEmployee(new Employee("Shivanshi", 102, "Consulting"), filepath2);
+    obj1.ReadEmployees(filepath2);
+
+
+
 }
