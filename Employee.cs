@@ -8,7 +8,6 @@ namespace FileInputOutputOperations
 {
     internal class Employee
     {
-        public bool Flag;
         public string? Name { get; set; }
         public int Id { get; set; }
         public string? Department { get; set; }

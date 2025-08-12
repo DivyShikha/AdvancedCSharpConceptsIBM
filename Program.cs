@@ -8,7 +8,8 @@ string filepath3 = "product.cs";
 
 //FileClassDemo(filepath1);
 //EmployeeStreamClass(filepath2);
-ProductStreamClass(filepath3);
+//ProductStreamClass(filepath3);
+LINQImplementation();
 static void FileClassDemo(string filePath1)
 {
     while (true)
@@ -61,4 +62,16 @@ static void ProductStreamClass(string filepath3)
     product.DisplayProductDetails();
     product.ReadProductEntry(filepath3);
 
+}
+
+static void LINQImplementation()
+{
+    LINQDemo demo = new LINQDemo();
+    demo.TakeLINQ();
+    demo.OrderByLINQ();
+    demo.GroupByLINQ();
+    demo.WhereLINQ();
+    demo.BasicLINQQUery();
+    demo.UsingQuerySyntaxOrderByLINQ();
+    demo.LINQOTypeArrayList();
 }
