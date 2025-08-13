@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace FileInputOutputOperations
@@ -17,6 +18,15 @@ namespace FileInputOutputOperations
             Name = name;
             Id = id;
             Department = department;
+        }
+        public void SerializeDeserializeEmployee(Employee emp)
+        {
+            string jsonString = JsonSerializer.Serialize(emp);
+            Console.WriteLine($"Serialized object: {jsonString}");
+            Employee emp2 = JsonSerializer.Deserialize<Employee>(jsonString);
+            Console.WriteLine($"Deserialized object - Name:  {emp2.Name}, ID = {emp2.Id}, Department = {emp2.Department}");
+
+
         }
         public void DisplayEmployeeDetails()
         {

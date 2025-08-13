@@ -7,10 +7,10 @@ string filepath2 = "employee.txt";
 string filepath3 = "product.cs";
 
 //FileClassDemo(filepath1);
-//EmployeeStreamClass(filepath2);
+EmployeeStreamClass(filepath2);
 //ProductStreamClass(filepath3);
 //LINQImplementation();
-ProductLINQ();
+//ProductLINQ();
 
 static void FileClassDemo(string filePath1)
 {
@@ -45,13 +45,13 @@ static void EmployeeStreamClass(string filepath2)
 {
 
     Employee obj1 = new Employee();
-    
 
 
-    obj1.AddEmployee(new Employee("Akash", 101, "Sales"), filepath2);
-    obj1.AddEmployee(new Employee("Divy", 102, "Consulting"), filepath2);
-    obj1.AddEmployee(new Employee("Shivanshi", 102, "Consulting"), filepath2);
-    obj1.ReadEmployees(filepath2);
+    obj1.SerializeDeserializeEmployee(new Employee("Divy", 100, "Consulting"));
+    //obj1.AddEmployee(new Employee("Akash", 101, "Sales"), filepath2);
+    //obj1.AddEmployee(new Employee("Divy", 102, "Consulting"), filepath2);
+    //obj1.AddEmployee(new Employee("Shivanshi", 102, "Consulting"), filepath2);
+    //obj1.ReadEmployees(filepath2);
 }
 
 static void ProductStreamClass(string filepath3)
