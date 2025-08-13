@@ -24,5 +24,15 @@ namespace FileInputOutputOperations
             }
             return returnList;
         }
+        public static async IAsyncEnumerable<int> GetNumbersAsync(int start, int end)
+        {
+            var random = new Random();
+            for (int i = start; i < end; i++)
+            {
+                yield return i;            // produces the value
+                await Task.Delay(400);     // async wait between yields
+            }
+        }
+
     }
 }

@@ -5,7 +5,7 @@ Console.WriteLine("Hello, World!");
 string filepath1 = "furnitures.txt";
 string filepath2 = "employee.txt";
 string filepath3 = "product.cs";
-
+//InvalidOperationException
 //FileClassDemo(filepath1);
 //EmployeeStreamClass(filepath2);
 //ProductStreamClass(filepath3);
@@ -102,7 +102,12 @@ static void ProductLINQ()
     prod.TakeAndTakeWhile(products);
 }
 
-static void AsynchronousDemo()
+static async  void AsynchronousDemo()
 {
-    AsynchronousStreamDemo.GetNumbers(5, 10);
+    //AsynchronousStreamDemo.GetNumbers(5, 10);
+    await foreach (var number in AsynchronousStreamDemo.GetNumbersAsync(1, 5))
+    {
+        Console.WriteLine(number);
+    }
+
 }
