@@ -115,6 +115,21 @@ namespace FileInputOutputOperations
                 Console.WriteLine(emp.Id + ": "+ emp.Name);
             }
         }
-
+        public void UsingSingleOrDefault()
+        {
+            Console.WriteLine("\nImolemnting Single or SignlrOrDefault...");
+            var singleVal = employees.Single(emp => emp.Id == 101);
+            Console.WriteLine(singleVal.Name);
+            var singleOrDefaVal = employees.SingleOrDefault(emp => emp.Id == 102);
+            Console.WriteLine(singleOrDefaVal.Name); 
+        }
+        public void UsingFirstOrFirstDefault()
+        {
+            Console.WriteLine("\nImplementing First or FirstDefault");
+            var firstVal = employees.First(emp => emp.Department == "Chemistry");
+            Console.WriteLine(firstVal.Name);
+            var firstValDefault = employees.FirstOrDefault(emp => emp.Department == "Consulting");
+            //Console.WriteLine(firstValDefault.Name);
+        }
     }
 }
