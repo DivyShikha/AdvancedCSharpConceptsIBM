@@ -7,10 +7,11 @@ string filepath2 = "employee.txt";
 string filepath3 = "product.cs";
 
 //FileClassDemo(filepath1);
-EmployeeStreamClass(filepath2);
+//EmployeeStreamClass(filepath2);
 //ProductStreamClass(filepath3);
 //LINQImplementation();
 //ProductLINQ();
+AsynchronousDemo();
 
 static void FileClassDemo(string filePath1)
 {
@@ -99,4 +100,9 @@ static void ProductLINQ()
     prod.OrderByVal(products);
     prod.GroupByVal(products);
     prod.TakeAndTakeWhile(products);
+}
+
+static void AsynchronousDemo()
+{
+    AsynchronousStreamDemo.GetNumbers(5, 10);
 }

@@ -9,9 +9,20 @@ namespace FileInputOutputOperations
 {
     internal class AsynchronousStreamDemo
     {
-        //public static IEnumberable<int> GetNumbers(int start, int end)
-        //{
+        public static IEnumerable<int> GetNumbers(int start, int end)
+        {
+            Random random = new Random();  
+            var returnList = new List<int>();
 
-        //}
+            for (int i = start; i < end; i++)
+            {
+                int number = random.Next(500, 1000);
+                Console.Write(i + " ");
+                returnList.Add(i);
+                Thread.Sleep(number);
+                
+            }
+            return returnList;
+        }
     }
 }
